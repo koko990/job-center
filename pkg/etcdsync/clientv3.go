@@ -7,7 +7,7 @@ import (
 
 	"github.com/coreos/etcd/clientv3"
 	"github.com/coreos/etcd/mvcc/mvccpb"
-	"github.com/job-center/server/util"
+	"github.com/gocomb/job-center/server/util"
 )
 
 type etcdClientV3 struct {

@@ -3,8 +3,8 @@ package grpc
 import (
 	"log"
 
-	pb"github.com/job-center/pkg/grpc/types"
-	"github.com/job-center/server/util"
+	pb"github.com/gocomb/job-center/pkg/grpc/types"
+	"github.com/gocomb/job-center/server/util"
 	"golang.org/x/net/context"
 	"google.golang.org/grpc"
 )

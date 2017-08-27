@@ -8,7 +8,7 @@ import (
 	"time"
 
 	"github.com/coreos/etcd/client"
-	"github.com/job-center/server/util"
+	"github.com/gocomb/job-center/server/util"
 )
 
 const (

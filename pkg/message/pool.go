@@ -1,6 +1,6 @@
 package message
 
-import . "github.com/job-center/pkg/cache"
+import . "github.com/gocomb/job-center/pkg/cache"
 
 //Generate a new message pool
 func (p *Pool) NewPool() {

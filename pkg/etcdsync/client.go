@@ -6,7 +6,7 @@ import (
 	"github.com/coreos/etcd/client"
 	"golang.org/x/net/context"
 
-	"github.com/job-center/server/util"
+	"github.com/gocomb/job-center/server/util"
 )
 
 // Client is the type for etcdsync client.

@@ -4,8 +4,8 @@ import (
 	"context"
 	"sync"
 
-	"github.com/job-center/server/trigger/rest"
-	"github.com/job-center/server/util"
+	"github.com/gocomb/job-center/server/trigger/rest"
+	"github.com/gocomb/job-center/server/util"
 )
 
 func (i InitJob) Init() {
@@ -33,7 +33,7 @@ func jobFactory(jobName RegisterJob) (r *jobServer) {
 	r.jobLog = make(map[string]string)
 	r.RegisterJob = jobName
 	r.syncVar = syncVar{jobDone: make(chan string),
-		ctxMessage: make(chan string)}
+		ctxMessage:              make(chan string)}
 	return r
 }
 

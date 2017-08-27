@@ -4,10 +4,11 @@ import (
 	"math/rand"
 	"runtime"
 	"time"
-	"github.com/job-center/pkg/grpc"
 
-	"github.com/job-center/server"
-	"github.com/job-center/server/util"
+	"github.com/gocomb/job-center/pkg/grpc"
+
+	"github.com/gocomb/job-center/server"
+	util "github.com/gocomb/job-center/server/util"
 )
 
 func jobExample(ctx server.JobContext) {
@@ -28,19 +29,17 @@ func jobExample(ctx server.JobContext) {
 	time.Sleep(5000 * time.Millisecond)
 	util.Logger.SetDebug("jobExample is done")
 
-
 }
 func main() {
 	runtime.GOMAXPROCS(runtime.NumCPU())
 	rand.Seed(time.Now().UTC().UnixNano())
-	a:=server.InitJob{server.RestTrigger}
+	a := server.InitJob{server.RestTrigger}
 	a.Init()
 	myServer := server.RegisterJob{NewJob: jobExample}
-	srConn:=grpc.RpcFlowServer{Port:":50051"}
+	srConn := grpc.RpcFlowServer{Port: ":50051"}
 	go srConn.ServerConn()
-	clConn:=grpc.RpcClient{Address:"localhost:50051"}
+	clConn := grpc.RpcClient{Address: "localhost:50051"}
 	go clConn.RpcClient()
 	server.Run(myServer)
-
 
 }

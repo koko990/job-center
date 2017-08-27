@@ -4,8 +4,8 @@ import (
 	"bytes"
 	"context"
 
-	"github.com/job-center/pkg/monitor"
-	"github.com/job-center/server/util"
+	"github.com/gocomb/job-center-center/pkg/monitor"
+	"github.com/gocomb/job-center-center/server/util"
 )
 
 //声明jobChanCtx，jobChanCtx向job pool传递消息。

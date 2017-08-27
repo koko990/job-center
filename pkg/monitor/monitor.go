@@ -1,7 +1,7 @@
 package monitor
 
 import (
-	"github.com/job-center/server/util"
+	"github.com/gocomb/job-center/server/util"
 )
 
 //handle the message method

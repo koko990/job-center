@@ -1,7 +1,7 @@
 package server
 
 import (
-	"github.com/job-center/pkg/message"
+	"github.com/gocomb/job-center-center/pkg/message"
 	"context"
 )
 
